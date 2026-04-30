@@ -42,7 +42,7 @@ markdown_extensions:
       custom_checkbox: true
 
 exclude_docs: |
-  .gitkeep
+  \.gitkeep$
 
 nav:
   - 首页: README.md
@@ -65,84 +65,88 @@ nav:
           - Spring Data JPA: 01_Java基础/08_SpringBoot与Spring生态/05_SpringDataJPA/README.md
           - Spring Event 与异步: 01_Java基础/08_SpringBoot与Spring生态/06_SpringEvent与异步/README.md
   - 数据库与缓存:
-      - ShardingSphere 读写分离: 02_数据库/01_ShardingSphere读写分离/README.md
-      - 分库分表: 02_数据库/02_分库分表/README.md
-      - MySQL 索引与优化: 02_数据库/03_MySQL索引与优化/README.md
+      - ShardingSphere 读写分离: 03_数据库/01_ShardingSphere读写分离/README.md
+      - 分库分表: 03_数据库/02_分库分表/README.md
+      - MySQL 索引与优化: 03_数据库/03_MySQL索引与优化/README.md
       - Redis:
-          - 缓存与数据结构: 02_数据库/05_Redis/01_缓存与数据结构/README.md
-          - 分布式锁: 02_数据库/05_Redis/02_分布式锁/README.md
-          - Redis 持久化与高可用: 02_数据库/05_Redis/03_Redis持久化与高可用/README.md
+          - 缓存与数据结构: 03_数据库/05_Redis/01_缓存与数据结构/README.md
+          - 分布式锁: 03_数据库/05_Redis/02_分布式锁/README.md
+          - Redis 持久化与高可用: 03_数据库/05_Redis/03_Redis持久化与高可用/README.md
   - 消息队列:
-      - RocketMQ: 03_消息队列/01_RocketMQ/README.md
-      - 消息队列常见问题: 03_消息队列/02_消息队列常见问题/README.md
+      - RocketMQ: 04_消息队列/01_RocketMQ/README.md
+      - 消息队列常见问题: 04_消息队列/02_消息队列常见问题/README.md
   - 设计模式:
-      - 总览: 04_设计模式/README.md
-      - 单例模式: 04_设计模式/01_单例模式/README.md
-      - 工厂模式: 04_设计模式/02_工厂模式/README.md
-      - 策略模式: 04_设计模式/03_策略模式/README.md
-      - 模板方法模式: 04_设计模式/04_模板方法模式/README.md
-      - 责任链模式: 04_设计模式/05_责任链模式/README.md
-      - 观察者模式: 04_设计模式/06_观察者模式/README.md
-      - 代理模式: 04_设计模式/07_代理模式/README.md
-      - 装饰器模式: 04_设计模式/08_装饰器模式/README.md
-      - 适配器模式: 04_设计模式/09_适配器模式/README.md
-      - 建造者模式: 04_设计模式/10_建造者模式/README.md
+      - 总览: 05_设计模式/README.md
+      - 单例模式: 05_设计模式/01_单例模式/README.md
+      - 工厂模式: 05_设计模式/02_工厂模式/README.md
+      - 策略模式: 05_设计模式/03_策略模式/README.md
+      - 模板方法模式: 05_设计模式/04_模板方法模式/README.md
+      - 责任链模式: 05_设计模式/05_责任链模式/README.md
+      - 观察者模式: 05_设计模式/06_观察者模式/README.md
+      - 代理模式: 05_设计模式/07_代理模式/README.md
+      - 装饰器模式: 05_设计模式/08_装饰器模式/README.md
+      - 适配器模式: 05_设计模式/09_适配器模式/README.md
+      - 建造者模式: 05_设计模式/10_建造者模式/README.md
   - 系统设计:
-      - 总览: 系统设计/README.md
+      - 总览: 08_系统设计/README.md
       - 工作流与编排:
-          - 总览: 系统设计/07_工作流与编排/README.md
-          - DAG 工作流引擎: 系统设计/07_工作流与编排/01_DAG工作流引擎/README.md
-          - 设计模式在工作流中的应用: 系统设计/07_工作流与编排/02_设计模式在工作流中的应用/README.md
+          - 总览: 08_系统设计/07_工作流与编排/README.md
+          - DAG 工作流引擎: 08_系统设计/07_工作流与编排/01_DAG工作流引擎/README.md
+          - 设计模式在工作流中的应用: 08_系统设计/07_工作流与编排/02_设计模式在工作流中的应用/README.md
       - 高可用与稳定性:
-          - 总览: 系统设计/08_高可用与稳定性/README.md
-          - 限流: 系统设计/08_高可用与稳定性/01_限流/README.md
-          - 熔断与降级: 系统设计/08_高可用与稳定性/02_熔断与降级/README.md
-          - 幂等设计: 系统设计/08_高可用与稳定性/03_幂等设计/README.md
-          - 线上问题排查思路: 系统设计/08_高可用与稳定性/04_线上问题排查思路/README.md
+          - 总览: 08_系统设计/08_高可用与稳定性/README.md
+          - 限流: 08_系统设计/08_高可用与稳定性/01_限流/README.md
+          - 熔断与降级: 08_系统设计/08_高可用与稳定性/02_熔断与降级/README.md
+          - 幂等设计: 08_系统设计/08_高可用与稳定性/03_幂等设计/README.md
+          - 线上问题排查思路: 08_系统设计/08_高可用与稳定性/04_线上问题排查思路/README.md
       - 微服务与分布式:
-          - 总览: 系统设计/09_微服务与分布式/README.md
-          - Dubbo RPC: 系统设计/09_微服务与分布式/01_DubboRPC/README.md
-          - 配置中心与服务注册: 系统设计/09_微服务与分布式/02_配置中心与服务注册/README.md
-          - 分布式事务: 系统设计/09_微服务与分布式/03_分布式事务/README.md
+          - 总览: 08_系统设计/09_微服务与分布式/README.md
+          - Dubbo RPC: 08_系统设计/09_微服务与分布式/01_DubboRPC/README.md
+          - 配置中心与服务注册: 08_系统设计/09_微服务与分布式/02_配置中心与服务注册/README.md
+          - 分布式事务: 08_系统设计/09_微服务与分布式/03_分布式事务/README.md
       - 任务调度:
-          - 总览: 系统设计/10_任务调度/README.md
-          - XXL-Job: 系统设计/10_任务调度/01_XXL-Job/README.md
+          - 总览: 08_系统设计/10_任务调度/README.md
+          - XXL-Job: 08_系统设计/10_任务调度/01_XXL-Job/README.md
       - 可观测性:
-          - 总览: 系统设计/11_可观测性/README.md
-          - SkyWalking: 系统设计/11_可观测性/01_SkyWalking/README.md
-          - 日志体系: 系统设计/11_可观测性/02_日志体系/README.md
+          - 总览: 08_系统设计/11_可观测性/README.md
+          - SkyWalking: 08_系统设计/11_可观测性/01_SkyWalking/README.md
+          - 日志体系: 08_系统设计/11_可观测性/02_日志体系/README.md
   - 面试汇总:
-      - 总览: 面试汇总/README.md
+      - 总览: 07_面试汇总/README.md
       - AI 工程化场景题:
-          - 总览: 面试汇总/12_AI工程化场景题/README.md
-          - 大模型流式输出怎么实现: 面试汇总/12_AI工程化场景题/01_大模型流式输出怎么实现/README.md
-          - 多模型路由与适配怎么设计: 面试汇总/12_AI工程化场景题/02_多模型路由与适配怎么设计/README.md
-          - 内容安全与 WAF: 面试汇总/12_AI工程化场景题/03_内容安全_WAF怎么做/README.md
-          - Tool Calling 与 MCP: 面试汇总/12_AI工程化场景题/04_ToolCalling_MCP怎么落地/README.md
-          - 大模型成本控制怎么做: 面试汇总/12_AI工程化场景题/05_大模型成本控制怎么做/README.md
+          - 总览: 07_面试汇总/12_AI工程化场景题/README.md
+          - 大模型流式输出怎么实现: 07_面试汇总/12_AI工程化场景题/01_大模型流式输出怎么实现/README.md
+          - 多模型路由与适配怎么设计: 07_面试汇总/12_AI工程化场景题/02_多模型路由与适配怎么设计/README.md
+          - 内容安全与 WAF: 07_面试汇总/12_AI工程化场景题/03_内容安全_WAF怎么做/README.md
+          - Tool Calling 与 MCP: 07_面试汇总/12_AI工程化场景题/04_ToolCalling_MCP怎么落地/README.md
+          - 大模型成本控制怎么做: 07_面试汇总/12_AI工程化场景题/05_大模型成本控制怎么做/README.md
       - 项目经验高频问答:
-          - 总览: 面试汇总/13_项目经验高频问答/README.md
-          - Q1 技术挑战: 面试汇总/13_项目经验高频问答/01_Q1_项目中最有技术挑战的点是什么/README.md
-          - Q2 高并发: 面试汇总/13_项目经验高频问答/02_Q2_如何处理高并发场景/README.md
-          - Q3 SSE 可靠性: 面试汇总/13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性/README.md
-          - Q4 分布式锁: 面试汇总/13_项目经验高频问答/04_Q4_分布式锁怎么实现_遇到过什么坑/README.md
-          - Q5 写后读一致性: 面试汇总/13_项目经验高频问答/05_Q5_读写分离如何保证写后读一致性/README.md
-          - Q6 多模型接入: 面试汇总/13_项目经验高频问答/06_Q6_多模型接入如何设计/README.md
-          - Q7 线上问题: 面试汇总/13_项目经验高频问答/07_Q7_项目中遇到过最严重的线上问题是什么_怎么解决的/README.md
-          - Q8 启动优化: 面试汇总/13_项目经验高频问答/08_Q8_如何优化服务启动时间/README.md
+          - 总览: 07_面试汇总/13_项目经验高频问答/README.md
+          - Q1 技术挑战: 07_面试汇总/13_项目经验高频问答/01_Q1_项目中最有技术挑战的点是什么/README.md
+          - Q2 高并发: 07_面试汇总/13_项目经验高频问答/02_Q2_如何处理高并发场景/README.md
+          - Q3 SSE 可靠性: 07_面试汇总/13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性/README.md
+          - Q4 分布式锁: 07_面试汇总/13_项目经验高频问答/04_Q4_分布式锁怎么实现_遇到过什么坑/README.md
+          - Q5 写后读一致性: 07_面试汇总/13_项目经验高频问答/05_Q5_读写分离如何保证写后读一致性/README.md
+          - Q6 多模型接入: 07_面试汇总/13_项目经验高频问答/06_Q6_多模型接入如何设计/README.md
+          - Q7 线上问题: 07_面试汇总/13_项目经验高频问答/07_Q7_项目中遇到过最严重的线上问题是什么_怎么解决的/README.md
+          - Q8 启动优化: 07_面试汇总/13_项目经验高频问答/08_Q8_如何优化服务启动时间/README.md
       - 面试作答方法论:
-          - 总览: 面试汇总/14_面试作答方法论/README.md
-          - STAR 模型答题: 面试汇总/14_面试作答方法论/01_STAR模型答题/README.md
-          - 答题三段式: 面试汇总/14_面试作答方法论/02_答题三段式/README.md
-          - 反问环节准备: 面试汇总/14_面试作答方法论/03_反问环节准备/README.md
-          - 简历项目准备清单: 面试汇总/14_面试作答方法论/04_简历项目准备清单/README.md
+          - 总览: 07_面试汇总/14_面试作答方法论/README.md
+          - STAR 模型答题: 07_面试汇总/14_面试作答方法论/01_STAR模型答题/README.md
+          - 答题三段式: 07_面试汇总/14_面试作答方法论/02_答题三段式/README.md
+          - 反问环节准备: 07_面试汇总/14_面试作答方法论/03_反问环节准备/README.md
+          - 简历项目准备清单: 07_面试汇总/14_面试作答方法论/04_简历项目准备清单/README.md
   - AI 工程:
-      - 总览: AI工程/README.md
+      - 总览: 09_AI工程/README.md
   - 工程框架:
-      - 总览: 工程框架/README.md
-      - 源码学习: 工程框架/源码学习/README.md
-      - Chatbot 运行手册 Windows: 工程框架/源码学习/chatbot-运行手册-Windows.md
-      - Spring AI Alibaba 学习路径: 工程框架/源码学习/spring-ai-alibaba-学习路径.md
+      - 总览: 06_工程框架/README.md
+      - 源码学习: 06_工程框架/源码学习/README.md
+      - Chatbot 运行手册 Windows: 06_工程框架/源码学习/chatbot-运行手册-Windows.md
+      - Spring AI Alibaba 学习路径: 06_工程框架/源码学习/spring-ai-alibaba-学习路径.md
   - 参考资料:
-      - 知识点与项目映射速查: 15_附录/01_知识点与项目映射速查/README.md
-      - LearningNotes 补充索引: 17_参考资料/01_LearningNotes补充索引/README.md
+      - 总览: 10_参考资料/README.md
+      - LearningNotes 补充索引: 10_参考资料/01_LearningNotes补充索引/README.md
+  - 附录:
+      - 总览: 11_附录/README.md
+      - 15 天逐日作战清单: 11_附录/00_15天逐日作战清单.md
+      - 知识点与项目映射速查: 11_附录/01_知识点与项目映射速查/README.md

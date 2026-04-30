@@ -156,7 +156,7 @@ mvn spring-boot:run
 3. **五种编排 Agent**（`flow/` 子包）
   - `SequentialAgent` 串行
   - `ParallelAgent` 并行 → 对应 `01_Java基础/01_CompletableFuture异步编排`
-  - `RoutingAgent` / `LlmRoutingAgent` 路由 → 对应 `12_AI工程化场景题/02_多模型路由与适配`
+  - `RoutingAgent` / `LlmRoutingAgent` 路由 → 对应 `07_面试汇总/12_AI工程化场景题/02_多模型路由与适配`
   - `LoopAgent` 循环
   - `SupervisorAgent` 监督
 4. **上下文工程 Hook**（`hook/` 子包）★ 面试高频
@@ -166,7 +166,7 @@ mvn spring-boot:run
   - 工具重试
 5. **工具与 MCP**
   - `tool/` / `tools/` / `extension/tools/`
-  - 对应 `12_AI工程化场景题/04_ToolCalling_MCP怎么落地`
+  - 对应 `07_面试汇总/12_AI工程化场景题/04_ToolCalling_MCP怎么落地`
 6. **A2A 通信**（`a2a/` 子包）
   - `A2aRemoteAgent` 等，结合 `spring-ai-alibaba-starter-a2a-nacos` 看注册发现。
 
@@ -185,10 +185,10 @@ mvn spring-boot:run
 3. **图本身**（`graph/` 根包）
   - `StateGraph` / `CompiledGraph`——图的构建与执行入口。
 4. **流式输出** `graph/streaming/`
-  - 对应 `01_Java基础/03_SSE流式传输` + `12_AI工程化场景题/01_大模型流式输出`。
+  - 对应 `01_Java基础/03_SSE流式传输` + `07_面试汇总/12_AI工程化场景题/01_大模型流式输出`。
 5. **持久化** `graph/checkpoint/savers/`
   - File / Memory / MySQL / Postgres / Mongo / Redis 多种实现
-  - 对应 `13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性`。
+  - 对应 `07_面试汇总/13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性`。
 6. **可观测性** `graph/observation/`
   - Micrometer / OpenTelemetry，对应 `11_可观测性`。
 7. **图导出** `graph/diagram/`
@@ -218,15 +218,15 @@ mvn spring-boot:run
 | `01_Java基础/01_CompletableFuture异步编排`       | `graph/async/`、`agent/flow/ParallelAgent.java`                                   |
 | `01_Java基础/08_SpringBoot与Spring生态/01_SpringBoot自动装配` | `spring-boot-starters/*/src/main/resources/META-INF/`                            |
 | `01_Java基础/03_SSE流式传输`                               | `graph/streaming/`、`ReactAgent` 流式输出路径                                           |
-| `03_消息队列`                                  | A2A 调用 + Nacos 集成（异步消息思路）                                                        |
+| `04_消息队列`                                  | A2A 调用 + Nacos 集成（异步消息思路）                                                        |
 | `09_微服务与分布式/02_配置中心与服务注册`                  | `spring-ai-alibaba-starter-config-nacos`、`-a2a-nacos`                            |
 | `11_可观测性/01_SkyWalking`                    | `graph/observation/`、`spring-ai-alibaba-starter-graph-observation`               |
-| `12_AI工程化场景题/01_大模型流式输出怎么实现`               | `graph/streaming/` + `ReactAgent`                                                |
-| `12_AI工程化场景题/02_多模型路由与适配怎么设计`              | `agent/flow/RoutingAgent.java`、`LlmRoutingAgent.java`                            |
-| `12_AI工程化场景题/04_ToolCalling_MCP怎么落地`       | `agent/tool/`、`agent/tools/`、Spring AI MCP 集成                                    |
-| `13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性`         | `graph/checkpoint/savers/` 各 Saver 实现                                            |
-| `13_项目经验高频问答/06_Q6_多模型接入如何设计`              | `RoutingAgent` + `ChatModel` 抽象                                                  |
-| `04_设计模式`                                  | Builder（`agent/Builder.java`）、责任链（Hook / Interceptor）、策略（多 Saver）、工厂（`factory/`） |
+| `07_面试汇总/12_AI工程化场景题/01_大模型流式输出怎么实现`               | `graph/streaming/` + `ReactAgent`                                                |
+| `07_面试汇总/12_AI工程化场景题/02_多模型路由与适配怎么设计`              | `agent/flow/RoutingAgent.java`、`LlmRoutingAgent.java`                            |
+| `07_面试汇总/12_AI工程化场景题/04_ToolCalling_MCP怎么落地`       | `agent/tool/`、`agent/tools/`、Spring AI MCP 集成                                    |
+| `07_面试汇总/13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性`         | `graph/checkpoint/savers/` 各 Saver 实现                                            |
+| `07_面试汇总/13_项目经验高频问答/06_Q6_多模型接入如何设计`              | `RoutingAgent` + `ChatModel` 抽象                                                  |
+| `05_设计模式`                                  | Builder（`agent/Builder.java`）、责任链（Hook / Interceptor）、策略（多 Saver）、工厂（`factory/`） |
 
 
 ---
@@ -250,7 +250,7 @@ mvn spring-boot:run
 - `07_工具与MCP.md`：ToolCallback 抽象 + MCP 接入方式 + Shell/Python 工具实现。
 - `08_A2A与Nacos.md`：A2aRemoteAgent + Nacos 注册发现源码梳理。
 - `09_自动装配与Starter.md`：以 `starter-graph-observation` 为例分析 SpringBoot 3.x 新版自动装配。
-- `10_面试问答映射.md`：把上述知识点对应回 `seeking/12_AI工程化场景题/` 和 `13_项目经验高频问答/` 的答题脚本。
+- `10_面试问答映射.md`：把上述知识点对应回 `seeking/07_面试汇总/12_AI工程化场景题/` 和 `07_面试汇总/13_项目经验高频问答/` 的答题脚本。
 
 ---
 
