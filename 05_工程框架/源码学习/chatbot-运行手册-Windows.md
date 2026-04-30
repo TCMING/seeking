@@ -36,7 +36,7 @@
 ### 2.2 申请 DashScope API Key
 
 1. 打开 [阿里云百炼控制台](https://bailian.console.aliyun.com/?apiKey=1&tab=api#/api)。
-2. 创建 API Key，复制类似 `sk-xxxxxxxxxxxx` 的字符串备用。
+2. 创建 API Key，复制一段自己的密钥字符串备用。
 
 ---
 
@@ -55,13 +55,13 @@ java -version                                      # 应输出 17.x
 ### 3.2 设置 API Key（仅当前会话）
 
 ```powershell
-$env:AI_DASHSCOPE_API_KEY="你的sk-xxxxxxxxxxxx"
+$env:AI_DASHSCOPE_API_KEY="<YOUR_API_KEY>"
 ```
 
 如希望永久生效：
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AI_DASHSCOPE_API_KEY","sk-xxx","User")
+[Environment]::SetEnvironmentVariable("AI_DASHSCOPE_API_KEY","<YOUR_API_KEY>","User")
 ```
 
 ### 3.3 启动 Chatbot
@@ -92,7 +92,7 @@ cd D:\project\study\spring-ai-alibaba\examples\chatbot
    - Runner → JRE：选择项目 SDK（JDK 17）。
 3. 右上角运行配置 → 选 `ChatbotApplication`。
 4. **Edit Configurations → Environment variables** 添加：
-   - `AI_DASHSCOPE_API_KEY=sk-xxx`
+   - `AI_DASHSCOPE_API_KEY=<YOUR_API_KEY>`
 5. 点 ▶ 启动。
 
 ---

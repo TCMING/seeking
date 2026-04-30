@@ -54,6 +54,10 @@ LearningNotes 的 HashMap 源码笔记偏 JDK 7 风格，核心结构是数组 +
 - `ArrayList.grow`
 - `LinkedList.linkLast`
 
+## 专题扩展
+
+- [HashMap 多线程死循环与 CPU 飙高排查](./02_HashMap多线程死循环排查/README.md)
+
 ## 源码级面试话术
 
 HashMap 的核心是通过 hash 定位桶，再在桶内比较 key。容量保持 2 的幂，是为了用位运算代替取模。扩容时会重新分配数组并迁移节点，所以如果能预估数据量，最好初始化容量。JDK 8 在链表过长时引入红黑树，但树化还受到数组容量限制，并不是一冲突就树化。

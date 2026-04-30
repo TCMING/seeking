@@ -134,7 +134,7 @@ ReactAgent.builder()
 
 ```powershell
 cd D:\project\study\spring-ai-alibaba\examples\chatbot
-$env:AI_DASHSCOPE_API_KEY="你的key"
+$env:AI_DASHSCOPE_API_KEY="<YOUR_API_KEY>"
 mvn spring-boot:run
 # 浏览器访问 http://localhost:8080/chatui/index.html
 ```
@@ -185,7 +185,7 @@ mvn spring-boot:run
 3. **图本身**（`graph/` 根包）
   - `StateGraph` / `CompiledGraph`——图的构建与执行入口。
 4. **流式输出** `graph/streaming/`
-  - 对应 `03_SSE流式传输` + `12_AI工程化场景题/01_大模型流式输出`。
+  - 对应 `01_Java基础/03_SSE流式传输` + `12_AI工程化场景题/01_大模型流式输出`。
 5. **持久化** `graph/checkpoint/savers/`
   - File / Memory / MySQL / Postgres / Mongo / Redis 多种实现
   - 对应 `13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性`。
@@ -202,7 +202,7 @@ mvn spring-boot:run
 
 - `examples/deepresearch/` —— 真实多 Agent 协作项目，把阶段 2/3 知识全部串起来。
 - `spring-boot-starters/` —— 看 Spring Boot 自动装配是怎么把能力暴露成 starter 的。
-  - 对应 `02_SpringBoot与Spring生态/01_SpringBoot自动装配`。
+  - 对应 `01_Java基础/08_SpringBoot与Spring生态/01_SpringBoot自动装配`。
   - 重点关注 `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`。
 - `spring-ai-alibaba-studio/` & `spring-ai-alibaba-admin/` —— 平台与前端，工程上选看。
 
@@ -216,9 +216,9 @@ mvn spring-boot:run
 | seeking 目录                                 | 对应可读源码                                                                           |
 | ------------------------------------------ | -------------------------------------------------------------------------------- |
 | `01_Java基础/01_CompletableFuture异步编排`       | `graph/async/`、`agent/flow/ParallelAgent.java`                                   |
-| `02_SpringBoot与Spring生态/01_SpringBoot自动装配` | `spring-boot-starters/*/src/main/resources/META-INF/`                            |
-| `03_SSE流式传输`                               | `graph/streaming/`、`ReactAgent` 流式输出路径                                           |
-| `06_消息队列`                                  | A2A 调用 + Nacos 集成（异步消息思路）                                                        |
+| `01_Java基础/08_SpringBoot与Spring生态/01_SpringBoot自动装配` | `spring-boot-starters/*/src/main/resources/META-INF/`                            |
+| `01_Java基础/03_SSE流式传输`                               | `graph/streaming/`、`ReactAgent` 流式输出路径                                           |
+| `03_消息队列`                                  | A2A 调用 + Nacos 集成（异步消息思路）                                                        |
 | `09_微服务与分布式/02_配置中心与服务注册`                  | `spring-ai-alibaba-starter-config-nacos`、`-a2a-nacos`                            |
 | `11_可观测性/01_SkyWalking`                    | `graph/observation/`、`spring-ai-alibaba-starter-graph-observation`               |
 | `12_AI工程化场景题/01_大模型流式输出怎么实现`               | `graph/streaming/` + `ReactAgent`                                                |
@@ -226,7 +226,7 @@ mvn spring-boot:run
 | `12_AI工程化场景题/04_ToolCalling_MCP怎么落地`       | `agent/tool/`、`agent/tools/`、Spring AI MCP 集成                                    |
 | `13_项目经验高频问答/03_Q3_SSE流式输出怎么保证可靠性`         | `graph/checkpoint/savers/` 各 Saver 实现                                            |
 | `13_项目经验高频问答/06_Q6_多模型接入如何设计`              | `RoutingAgent` + `ChatModel` 抽象                                                  |
-| `16_设计模式`                                  | Builder（`agent/Builder.java`）、责任链（Hook / Interceptor）、策略（多 Saver）、工厂（`factory/`） |
+| `04_设计模式`                                  | Builder（`agent/Builder.java`）、责任链（Hook / Interceptor）、策略（多 Saver）、工厂（`factory/`） |
 
 
 ---
@@ -239,7 +239,7 @@ mvn spring-boot:run
 
 ## 六、学习产出清单（建议边读边写）
 
-边阅读边在 `seeking/源码学习/` 下补充以下笔记，方便后续做项目复盘和面试输出：
+边阅读边在 `工程框架/源码学习/` 下补充以下笔记，方便后续做项目复盘和面试输出：
 
 - `01_架构总览.md`：四层架构图 + 模块依赖图（Mermaid）。
 - `02_ReactAgent主流程.md`：从 `ReactAgent.invoke()` 到 `ChatModel.call()` 的调用链时序图。
@@ -261,4 +261,3 @@ mvn spring-boot:run
 - Graph 快速开始：[java2ai.com/docs/frameworks/graph-core/quick-start](https://java2ai.com/docs/frameworks/graph-core/quick-start)
 - Spring AI 概念：[java2ai.com/ecosystem/spring-ai/reference/concepts](https://java2ai.com/ecosystem/spring-ai/reference/concepts)
 - 仓库本身：[github.com/alibaba/spring-ai-alibaba](https://github.com/alibaba/spring-ai-alibaba)
-

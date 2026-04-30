@@ -1,3 +1,20 @@
 site/
 .mkdocs/
+.claude/
+新建文件夹/
 
+# Common sensitive files
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.sqlite
+*.db
+*.cer
+*.crt
+*.der
+*.asc
