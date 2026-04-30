@@ -2,6 +2,7 @@ site/
 .mkdocs/
 .claude/
 新建文件夹/
+11_附录/
 
 # Common sensitive files
 .env
